@@ -1,0 +1,440 @@
+name.
+years of experience
+expectation from the program.
+
+11.00am to 11.15am
+1.00 PM to 2.00 PM.
+3.30 PM to 3.45 pm.
+
+https://bit.ly/31iVZfj
+
+https://bit.ly/3be6PrI -- q and A link.
+
+
+project success
+= process * tools * techology  * culture.
+
+technology is getting commoditized.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+summarize.
+1. spring is product and opinionated product.
+2. three tier architecture, spring is used today
+in service and dao, presentation layer has javascript.
+3. you will get many api claiming advantages ...
+we need tradeoff.
+
+in terms of coding. what is most important thing spring
+tells.
+
+1. inversion of control.
+spring hey create objects and give to me.
+2. dependancy injection.
+spring is telling i will give you the object locally.
+if you want you increase the scope by storing it
+in a non local reference.
+
+
+
+
+
+
+
+
+
+code
+configuration file 
+1. is it our own
+we can show creativity
+2. it is used by the framework  ( restrictions)
+what you write inside is decided by the framework
+3. filename.
+if you are writing filename anywehre in code.
+that means file name can be anything.
+
+
+
+maven 
+1. folder structure decided by maven, depending
+on the category of the maven project you choose
+(opinionated) with lot of customizations.
+
+2. we have to package our code, deploy our code.
+maven gives you options for doing this.
+
+3.to compile code we may use other librarymaven 
+gives us mechanism to include libraries (jar files
+of other people)
+
+4. today world not using maven is not acceptable.
+maven can download libraries from net and also
+try to store it company level respositories or a system 
+
+
+
+we have too many options to configure in maven.
+too many, most common reason why  maven will not work
+
+
+
+c:\users\xx folder
+xx folder username.
+
+xx folder there will be another folder called .m2.
+
+.m2 there is a folder called repositories, this is folder
+where downloaded libraries are stored.
+
+in .m2 folder we need a file called settings.xmlwhich needs to configured in a company specific way to download
+the lilbraries required.
+
+
+
+
+miracle question , which library to download
+answer nobody can tell us except the framework
+or the cousins provided the framework is old.
+
+
+https://codeshare.io/5e1Mbl
+
+
+maven
+1. no errors in maven project, it is showing jdk1.8
+2. pom.xml file.
+we have some add dependancies
+
+depedancy is standardized mechansim available in
+maven to include any kind of libraries.
+
+dependancies tag
+dependancy
+version
+groupid
+artififact id 
+from this, maven will start downloading the jar files.
+
+
+
+
+figuring out what entries to put in maven.xml file
+for libraries, .. patience ...
+
+
+
+
+
+
+
+
+
+
+	<dependency>
+  		<groupId>org.springframework</groupId>
+  		<artifactId>spring-context</artifactId>
+  		<version>5.0.7.RELEASE</version>
+  	</dependency>
+
+
+this line we wrote in our pom.xml file.
+i cannot show any creativity on groupid
+artificatid or version,  becuase those details
+are matched with are repository to pick appro.. libraries.
+
+we want to work on web serivces
+i may need another set of jar files it is left to the framework
+guys whether they want to bundle the entire libraries
+in one or set of things, spring framework does it as set of
+things and not as a single library.
+
+
+
+
+
+
+
+
+<!-- https://mvnrepository.com/artifact/org.mybatis/mybatis -->
+<dependency>
+    <groupId>org.mybatis</groupId>
+    <artifactId>mybatis</artifactId>
+    <version>3.5.3</version>
+</dependency>
+
+
+
+
+
+
+there will tonnes of annotation that comes into usage.
+if we byheart the out of ram ... come.
+
+so let us you see X annotation ?
+
+
+
+
+@Component.
+who gave it
+spring guys
+
+what is benefit they have promised
+they have told if you use annotation I will create
+the object of the class.
+
+when will they give benefit
+if we give our classname to spring framework.
+
+at what leve should i use the annotation
+Class level.
+
+
+@componentScan
+who gave it, spring gusy
+
+what does it do?
+in java project there could be multipe packages.
+looking in all packages , and each class for annotations
+that spring has given is tedious
+spring wants to narrow down the searh to some packages
+you mention.
+@componentScan("hey spring search only in these packges")
+
+class A
+{
+
+public void f1()
+{
+	sysout("bl");
+}
+
+
+}
+
+A obj1 = ?
+obj1.f1();
+security began
+bl
+security end.
+
+
+1.@componentScan  -- you are telling spring to look
+packages which is using the @component anntoation.
+
+2. @Component  -- spirng hey create the object.
+
+@autowired-- we are telling spring hey two objects
+x and y.  x needs to vice versa.
+
+at the place where you need the object in a function
+use @autowired.
+
+for example x needs y objectx, then @autowired is used
+in some function of x.
+
+we want ot create the object of the class and tell
+spring hey you must use it for wiring. 
+we write a function that returns an object and use
+an annotation called @Bean on top of the function.
+
+
+
+
+
+
+
+
+
+
+
+
+6 class file
+
+4 classes
+2 interfaces.
+
+eclipse
+
+1. use it and then create rather create it and then think where to use it
+
+
+1. main function.
+2 Presentaton class
+3. create a presentation function.
+4. inside presnetation function start using service object
+5. create  a service class...
+
+
+1. 3 tier using spring.
+2. web technology and web services.
+3. come with your own two examples...
+
+
+
+
+
+convention
+
+1. if you are uisng @Bean obvioiusly on a function
+the fucntion should return some object.
+
+2. if we are uisng @autowired, function should
+take object as input argument .
+
+java bean
+java class, with setters and getterrs following
+the naming convention and it is important
+no argument constructor in teh class.
+
+POJO-- pure old java object.
+
+@component is not only annotation that helps you
+in creating objects thre are speicalized ones
+for example
+
+@Repository
+@service
+@Controller
+@RestController.
+...
+
+
+
+
+
+web application.
+
+REST... http 
+1. we are going to use http protocol.
+2. what do you mean by event?
+
+2.1 notification mechanism when state changes.
+2.2 event is one way communication, event listener
+cannot talk back.
+
+web application
+get
+post
+request modees ie client to server.
+get body is empty
+post body can have content.
+
+we need very high levels of abstractions in any
+web application we are responding to events.
+event handling functions always return void.
+
+
+
+
+
+
+
+
+
+
+
+
+hope the mind map on the spring is overview.
+
+
+
+
+
+
+
+
+
+
+
+
+
+web services.
+0. both json and http are great becuase they are standards
+1.we have a service layer function.
+2. we want to enable this function should be called
+thru http protocol.
+3. to call a function client needs input paramter and data type and output paramter and data type.
+4. we are telling presentation can be built in any technology
+5. so syntax for the same data type can change in servcie layer as well as presenation layer.. 
+6. so we need some neutral format to represent variables
+(dataype + values) = that format is json
+7. in short what the client does is the following.
+
+1. write the calling function logic using an ip address.
+some name and mode of request., passing
+paramters in json format. client can be helped by
+using some framework.
+
+
+
+
+
+
+
+
+
+code a web service (REST), 
+
+
+1. you have a class, tell spring hey look this class
+object you must create yourself and you should take
+responsiblity of converting respones to json and json
+data to native things.
+@RestController.
+
+
+2. we write a function. x
+
+    Z  x( Y temp)
+we have to first decide when x be called.
+1. string to identify
+2. mode of request.
+we are telling if somebody comes with get mode of request and a string called "callthis" under that circumstance
+call my function x.
+3. we see an input argument called Y.
+4. this Y will have to come thru three ways.
+4.1 query parameter     url?x=3
+4.2  url/name/3  -- path variable.
+4.3 object in request body, provided method is post.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

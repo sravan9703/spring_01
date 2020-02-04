@@ -13,7 +13,9 @@ public class GreetingController {
 	private final AtomicLong counter = new AtomicLong();
 
 	@GetMapping("/greeting")
-	public Greeting greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
-		return new Greeting(counter.incrementAndGet(), String.format(template, name));
+	public Greeting greeting(@RequestParam(value = "xyz", defaultValue = "pqr") String x) {
+		System.out.println("prove this function is getting called");
+		return new Greeting(23L,x.toUpperCase());
+		
 	}
 }
