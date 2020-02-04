@@ -2,3 +2,4 @@ https://sivalabs.in/2012/10/mybatis-tutorial-part4-spring-integration/
 https://techndeck.com/convert-pojo-to-json-and-vice-versa-using-jackson-api-updated/
 https://dzone.com/articles/spring-boot-restful-web-service-complete-example
 https://howtodoinjava.com/spring-boot2/rest/rest-api-example/
+https://www.javaguides.net/2019/08/spring-boot-mybatis-crud-h2-database-example.html
